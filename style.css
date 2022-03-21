@@ -1,0 +1,124 @@
+:root{
+    --primary-color: yellow;
+    --secondary-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: yellow;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.todo{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo-title{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px gray;
+    font-size: 3rem;
+    color: yellow;
+}
+
+.todo-list{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.todo-item > div{
+    width: 80%;
+    overflow: hidden;
+}
+
+.todo-item:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: black;
+    color: yellow;
+}
+
+.todo-item > input[type='text']{
+    border: none;
+    width: 80%;
+    font-family: inherit;
+}
+
+.todo-item > input[type='button'],
+.todo-item > input[type='checkbox']{
+    width: 30px;
+    height: 30px;
+    font-family: inherit;
+}
+
+.todo-item > input[type='checkbox']:checked + div{
+    text-decoration: line-through;
+}
+
+.todo-new-item{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px gray;
+    margin: 10px;
+    font-family: inherit;
+}
+
+.todo-new-item > input{
+    background-color: white;
+    border: none;
+    width: 80%;
+    outline: none;
+    font-family: inherit;
+}
+
+.todo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width : 1200px){
+    .todo{
+        width: 90vw;
+    }
+}
+
+
